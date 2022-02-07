@@ -1,0 +1,30 @@
+---
+name: Deploy The Watercooler
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Docker Compose
+        run: curl -L ${DOCKER_COMPOSE_URL}/docker-compose-`uname -s`-`uname -m` > ./docker-compose &&
+          chmod +x ./docker-compose
+        env:
+          DOCKER_COMPOSE_URL: https://github.com/docker/compose/releases/download/v2.2.3
+
+      - name: Fetch blog-gen
+        env:
+          BLOG_GEN_VERSION: 2.0.8
+        run: >-
+          git clone -b "v${BLOG_GEN_VERSION}" https://github.com/carlosonunez/https-hugo-bloggen blog-gen
+
+      - name: Decrypt environment file
+        run: ./blog-gen/scripts/decrypt_env.sh
+        env:
+          ENV_PASSWORD: ${{ secrets.env_file_encryption_key }}
+
+      - name: Deploy the blog
+        run: ./blog-gen/scripts/deploy
