@@ -1,4 +1,10 @@
 [[ menu.main ]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = -99
+
+[[ menu.main ]]
   identifier = "about-me"
   name = "About Me"
   url = "/about-me"
