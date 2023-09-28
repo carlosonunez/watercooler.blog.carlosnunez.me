@@ -1,6 +1,6 @@
 ---
 title: thuma
-date: 2023-09-27 21:38
+date: 2023-09-27T21:38:00-05:00
 draft: true
 ---
 

@@ -1,29 +1,16 @@
-iam = "Hello! I am"
-comment = "utterances"
-timeformat = "2006-01-12"
-switch = ["🌚", "🌝"]
-displayDate = true
-selectable = true
-commentOnAllPosts = true
-toc = "lines"
-
-[params.utterances]
-repo = "carlosonunez/watercooler.blog.carlosnunez.me"
-issueTerm = "pathname"
-
-[[params.social]]
-name = "github"
-url = "https://github.com/{{ .Env.GITHUB_HANDLE }}"
-svg = ""
-[[params.social]]
-name = "linkedin"
-url = "https://linkedin.com/in/{{ .Env.LINKEDIN_HANDLE }}"
-svg = ""
-[[params.social]]
-name = "twitter"
-url = "https://twitter.com/{{ .Env.TWITTER_HANDLE }}"
-svg = ""
-[[params.social]]
-name = "rss"
-url = "/index.xml"
-svg = ""
+mainSections = ["post"]
+[[params.socials]]
+name = "About"
+link = "/about"
+[[params.socials]]
+name = "RSS"
+link = "/index.xml"
+[[params.socials]]
+name = "GitHub"
+link = "https://github.carlosnunez.me"
+[[params.socials]]
+name = "LinkedIn"
+link = "https://linkedin.carlosnunez.me"
+[[params.socials]]
+name = "Work Thoughts"
+link = "https://blog.carlosnunez.me"

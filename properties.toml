@@ -1,6 +1,3 @@
-paginate = 6
-
 [author]
 name = "Carlos Nunez"
-slogon = "musings and interestings from a wannabe engineering leader"
-description = "The non-tech-side of blog.carlosnunez.me. War stories, trends, career advice, and other non-tech thoughts go here."
+homepage = "https://carlosnunez.me"
