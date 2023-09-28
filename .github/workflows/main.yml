@@ -17,7 +17,7 @@ jobs:
 
       - name: Fetch blog-gen
         env:
-          BLOG_GEN_VERSION: 2.1.1
+          BLOG_GEN_VERSION: 2.1.2
         run: >-
           git clone -b "v${BLOG_GEN_VERSION}" https://github.com/carlosonunez/https-hugo-bloggen blog-gen
 
