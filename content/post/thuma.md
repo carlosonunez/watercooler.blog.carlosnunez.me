@@ -1,7 +1,15 @@
 ---
 title: thuma
 date: 2023-09-27T21:38:00-05:00
-draft: true
+draft: false
+categories:
+- housing
+- murphy's law
+tags:
+- bedding
+- bedroom
+- housing
+- random
 ---
 
 {{< figure src="/images/thuma/the-bed.png" >}}
